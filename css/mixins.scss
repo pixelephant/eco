@@ -1,0 +1,112 @@
+/*COLORS*/
+
+$burgundy: #971E26;
+$blue: #1072B5;
+$black: #231F20;
+
+$white: #FAFAFA;
+$gray: #F1F1F1;
+
+$gray-border:#D9D8D9;
+
+
+/*FONTS*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.iconfont{
+	text-decoration:none;
+	color:$black;
+	span{
+		font-size: 2em;
+	}	
+}
+
+/* ICONFONT TEMPLATES
+
+<span aria-hidden="true" data-icon="&#x74;"></span> //telephone
+<span aria-hidden="true" data-icon="&#x6d;"></span> //menu
+<span aria-hidden="true" data-icon="&#x70;"></span> //marker
+<span aria-hidden="true" data-icon="&#x65;"></span> //email
+<span aria-hidden="true" data-icon="&#x69;"></span> //interesting
+<span aria-hidden="true" data-icon="&#x64;"></span> //data
+
+*/
+
+.gi{
+	font-family:Georgia;
+	font-style:italic;
+	font-weight:normal;
+}
+
+.hnc{
+	text-transform:uppercase;
+	font-family:'HelveticaNeueW02-77BdCn 694066';
+	font-weight:normal;
+}
+
+.hnb{
+	font-weight:normal;
+	font-family:'HelveticaNeueW02-75Bold';
+}
+
+.hn{
+	font-weight:normal;
+	font-style:normal;
+	font-family:'HelveticaNeueW02-55Roma';
+}
+
+/*HELPERS*/
+
+@mixin t($what:all, $dur:0.3s, $ease:ease-in-out){
+	-webkit-transition: $what $dur $ease;  /* Chrome 1-25, Safari 3.2+ */
+	-moz-transition: $what $dur $ease;  /* Firefox 4-15 */
+	-o-transition: $what $dur $ease;  /* Opera 10.50–12.00 */
+	transition: $what $dur $ease;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+@mixin delay($dur:1s){
+	animation-delay:$dur; /* W3C and Opera */
+	-moz-animation-delay:$dur; /* Firefox */
+	-webkit-animation-delay:$dur; /* Safari and Chrome */
+}
+
+@mixin noflick(){
+	-webkit-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-ms-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
