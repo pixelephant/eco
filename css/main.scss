@@ -342,6 +342,7 @@ hgroup{
 }
 
 .f-wrap{
+    padding: 0 1em;
     max-width: 71.25em;
     margin: 0 auto;
 }
@@ -354,7 +355,7 @@ hgroup{
     span{
         font-size:0.77777777777em;
         display: block;
-        font-family: 'hn';
+        @extend .hn;
         font-style: normal;
     }
 }

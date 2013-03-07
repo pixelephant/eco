@@ -44,7 +44,7 @@
   font-weight: normal;
   font-family: 'HelveticaNeueW02-75Bold'; }
 
-.hn {
+.hn, .caption span {
   font-weight: normal;
   font-style: normal;
   font-family: 'HelveticaNeueW02-55Roma'; }
@@ -453,6 +453,7 @@ hgroup {
   max-width: 71.25em; }
 
 .f-wrap {
+  padding: 0 1em;
   max-width: 71.25em;
   margin: 0 auto; }
 
@@ -463,7 +464,6 @@ hgroup {
   .caption span {
     font-size: 0.77777777777em;
     display: block;
-    font-family: 'hn';
     font-style: normal; }
 
 /* ------------------ SWIPER ------------------ */
