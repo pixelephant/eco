@@ -24,20 +24,13 @@ $gray-border:#D9D8D9;
 }
 
 [data-icon]:before {
-	font-family: 'icomoon';
+	font-family: 'icomoon' !important;
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-}
-
-.iconfont{
-	text-decoration:none;
-	color:$black;
-	span{
-		font-size: 2em;
-	}	
+	text-transform:none !important;
 }
 
 /* ICONFONT TEMPLATES
@@ -61,6 +54,9 @@ $gray-border:#D9D8D9;
 	text-transform:uppercase;
 	font-family:'HelveticaNeueW02-77BdCn 694066';
 	font-weight:normal;
+	text-decoration:none;
+	color:$black;
+	letter-spacing:1px;
 }
 
 .hnb{

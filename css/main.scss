@@ -1,4 +1,5 @@
 @import 'mixins.scss';
+@import 'normalize.css';
 
 html,
 button,
@@ -6,6 +7,10 @@ input,
 select,
 textarea {
     color: $black;
+}
+
+html{
+    background: $white;
 }
 
 body {
@@ -16,11 +21,13 @@ body {
 ::-moz-selection {
     background: $burgundy;
     text-shadow: none;
+    color: white;
 }
 
 ::selection {
     background: $burgundy;
     text-shadow: none;
+    color: white;
 }
 
 hr {
@@ -54,9 +61,138 @@ textarea {
 }
 
 
+#main-header{
+    width:100%;
+    padding: 1em 0;
+    overflow: hidden;
+    background: $gray;
+    a{
+        @extend .hnc;
+    }
+    li{
+        display: none;
+        &.eco-logo{
+            display: inline-block;
+        }
+    }
+    .mobile{
+        width:10%;
+        position:absolute;
+        text-align: center;
+        left:0;
+        bottom:10%;
+        font-size: 2em;
+        &:last-child{
+            right:0;
+            left:auto;
+        }
+    }
+}
+
+#jPanelMenu-menu{
+    left:-1px !important;
+    border-right:1px solid $gray-border;
+    .eco-logo{
+        display:none;
+    }
+    a{
+        @extend .hnc;
+        border-bottom:1px solid $gray-border;
+        display:block;
+        padding:1em;
+    }
+}
+
+#main-nav{
+    ul{
+        overflow: hidden;
+        text-align: center;
+    }
+    li{
+        @include t;
+        font-size:0.875em;
+        border:2px solid transparent;
+        a{
+            padding: 0.4em 0;
+            line-height: 1.2;
+            display: block;
+        }
+        &.eco-logo{
+            border:none;
+            padding: 0;
+            a{
+                padding: 0;
+            }
+        }
+    }
+}
+
+.no-touch #main-nav li:hover,#main-nav li:focus{
+    border-color: $black;
+}
+
+.no-touch #main-nav li:active{
+    position: relative;
+    @include t(none);
+    top: 1px;
+    &.eco-logo{
+        position: absolute;
+        top:1%;
+    }
+}
 
 
+@media only screen and (min-width: 48em) {
+    #main-header{
+        .mobile{
+            display: none;
+        }
+        li{
+            display:block;
+            float: left;
+            &.logo{
+                position: relative;
+            }
+        }
+    }
 
+    #main-nav{
+        ul{
+            width:100%;
+        }
+        li{
+            margin: 8em 0.1% 0 0.1%;
+            width: 15.94%;
+            text-align: center;
+            &.eco-logo{
+                margin-top:0;
+                width: 100%;
+                position: absolute;
+                text-align:center;
+                left:0;
+            }
+        }
+    } 
+}
+
+@media only screen and (min-width: 61.875em) {
+    #main-nav{
+        max-width: 71.25em;
+        margin:0 auto;
+    }
+    #main-nav li{
+        font-size: 1em;
+        margin-top: 2em;
+        width:13.74%;
+        &.eco-logo{
+            position: static;
+            width:13.74%;
+            margin-left: 0;
+            left: 0;
+            top:0;
+        }
+    }
+}
 
 
 
