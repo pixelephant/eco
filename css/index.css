@@ -207,7 +207,20 @@
 
 @media only screen and (min-width: 48em) {
   #value-prop h1 {
-    margin-top: 2.5em; } }
+    margin-top: 2.5em; }
+
+  .service {
+    width: 50%;
+    float: left; }
+    .service p {
+      padding: 0 1em; }
+    .service:last-child {
+      clear: both;
+      float: none; }
+
+  #actual, #property {
+    float: left;
+    width: 50%; } }
 #property, #actual {
   text-align: center; }
   #property p, #actual p {
@@ -265,3 +278,11 @@
   .service p {
     max-width: 30em;
     margin: 0 auto; }
+
+@media all and (min-width: 64em) {
+  .service {
+    width: 33.3333%;
+    float: left; }
+    .service:last-child {
+      clear: none;
+      float: left; } }

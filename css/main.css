@@ -50,16 +50,17 @@
   font-family: 'HelveticaNeueW02-55Roma'; }
 
 /*HELPERS*/
-.clearfix:before, #prop-links:before,
+.clearfix:before, #prop-links:before, .pagination:before,
 .clearfix:after,
-#prop-links:after {
+#prop-links:after,
+.pagination:after {
   content: " ";
   display: table; }
 
-.clearfix:after, #prop-links:after {
+.clearfix:after, #prop-links:after, .pagination:after {
   clear: both; }
 
-.clearfix, #prop-links {
+.clearfix, #prop-links, .pagination {
   *zoom: 1; }
 
 .button-white, #prop-links a {
@@ -448,7 +449,12 @@ hgroup {
 /* ------------------ MAIN ------------------ */
 #main-content > section {
   padding: 0 1em;
-  margin: 2em 0; }
+  margin: 2em auto;
+  max-width: 71.25em; }
+
+.f-wrap {
+  max-width: 71.25em;
+  margin: 0 auto; }
 
 .caption {
   color: #231f20;
@@ -460,6 +466,146 @@ hgroup {
     font-family: 'hn';
     font-style: normal; }
 
+/* ------------------ SWIPER ------------------ */
+.swiper-container {
+  overflow-y: visible !important;
+  overflow-x: hidden; }
+
+.swiper-wrapper {
+  height: auto !important; }
+
+.swiper-slide {
+  height: auto !important;
+  text-align: center;
+  padding: 0 0.2em 10px 0.2em; }
+  .swiper-slide img {
+    margin-top: 2px;
+    display: inline-block;
+    max-width: 100%; }
+  .swiper-slide a {
+    text-decoration: none; }
+    .swiper-slide a img {
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Chrome 1-25, Safari 3.2+ */
+      -moz-transition: all 0.3s ease-in-out;
+      /* Firefox 4-15 */
+      -o-transition: all 0.3s ease-in-out;
+      /* Opera 10.50–12.00 */
+      transition: all 0.3s ease-in-out;
+      /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */ }
+
+.pagination {
+  width: 105px;
+  margin: 0 auto;
+  text-align: center; }
+
+.swiper-pagination-switch {
+  display: block;
+  float: left;
+  width: 8px;
+  height: 8px;
+  padding: 5px;
+  border-radius: 100%;
+  background: transparent;
+  border: 1px solid #231f20;
+  margin: 0 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+  cursor: pointer; }
+
+.no-touch .swiper-pagination-switch:hover, .swiper-pagination-switch:focus {
+  opacity: 1;
+  background: #231f20; }
+
+.no-touch .swiper-pagination-switch:active {
+  -webkit-transition: none 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: none 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: none 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: none 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+  position: relative;
+  top: 1px; }
+
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Fix of Webkit flickering */
+  z-index: 1; }
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0s;
+  -webkit-transform: translate3d(0px, 0, 0);
+  -webkit-transition-timing-function: ease;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 0s;
+  -moz-transform: translate3d(0px, 0, 0);
+  -moz-transition-timing-function: ease;
+  -o-transition-property: -o-transform;
+  -o-transition-duration: 0s;
+  -o-transform: translate3d(0px, 0, 0);
+  -o-transition-timing-function: ease;
+  -ms-transition-property: -ms-transform;
+  -ms-transition-duration: 0s;
+  -ms-transform: translate3d(0px, 0, 0);
+  -ms-transition-timing-function: ease;
+  transition-property: transform;
+  transition-duration: 0s;
+  transform: translate3d(0px, 0, 0);
+  transition-timing-function: ease; }
+
+.swiper-slide {
+  float: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  .swiper-slide img {
+    -webkit-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+.winphone .swiper-slide {
+  float: none; }
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y; }
+
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x; }
+
+/* Specify Swiper's Size: */
+.swiper-container, .swiper-slide {
+  width: 100%;
+  height: auto; }
+
+.swiper-active-switch {
+  background: #231f20; }
+
+@media only screen and (min-width: 48em) {
+  .swiper-slide img {
+    width: 90%; } }
 /* ------------------ COMMON ------------------ */
 h2 {
   text-align: center; }

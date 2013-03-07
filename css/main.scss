@@ -337,7 +337,13 @@ hgroup{
 
 #main-content > section{
     padding: 0 1em;
-    margin: 2em 0;
+    margin: 2em auto;
+    max-width: 71.25em;
+}
+
+.f-wrap{
+    max-width: 71.25em;
+    margin: 0 auto;
 }
 
 .caption{    
@@ -350,6 +356,147 @@ hgroup{
         display: block;
         font-family: 'hn';
         font-style: normal;
+    }
+}
+
+/* ------------------ SWIPER ------------------ */
+
+.swiper-container{
+    overflow-y: visible !important;
+    overflow-x: hidden;
+}
+
+.swiper-wrapper{
+    height: auto !important;
+}
+
+.swiper-slide{
+    height:auto !important;
+    text-align: center;
+    padding: 0 0.2em 10px 0.2em;
+    img{
+        margin-top: 2px;
+        display: inline-block;
+        max-width: 100%;
+    }
+    a{
+        text-decoration: none;
+        img{
+            @include t;
+        }
+    }
+}
+
+.pagination{
+    width:105px;
+    margin:0 auto;
+    text-align:center;
+    @extend .clearfix;
+}
+
+.swiper-pagination-switch{
+    display: block;
+    float:left;
+    width: 8px;
+    height: 8px;
+    padding:5px;
+    border-radius: 100%;
+    background: transparent;
+    border:1px solid $black;
+    margin: 0 10px;
+    @include t;
+    cursor:pointer;
+}
+
+.no-touch .swiper-pagination-switch:hover,.swiper-pagination-switch:focus{
+    opacity:1;
+    background:$black;
+}
+
+.no-touch .swiper-pagination-switch:active{
+    @include t(none); 
+    position:relative; 
+    top:1px;
+}
+
+.swiper-container {
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    backface-visibility:hidden;
+    /* Fix of Webkit flickering */
+    z-index:1;
+}
+.swiper-wrapper {
+    position:relative;
+    width:100%;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:0s;
+    -webkit-transform:translate3d(0px,0,0);
+    -webkit-transition-timing-function:ease;
+    
+    -moz-transition-property:-moz-transform;
+    -moz-transition-duration:0s;
+    -moz-transform:translate3d(0px,0,0);
+    -moz-transition-timing-function:ease;
+    
+    -o-transition-property:-o-transform;
+    -o-transition-duration:0s;
+    -o-transform:translate3d(0px,0,0);
+    -o-transition-timing-function:ease;
+    
+    -ms-transition-property:-ms-transform;
+    -ms-transition-duration:0s;
+    -ms-transform:translate3d(0px,0,0);
+    -ms-transition-timing-function:ease;
+    
+    transition-property:transform;
+    transition-duration:0s;
+    transform:translate3d(0px,0,0);
+    transition-timing-function:ease;
+    
+}
+.swiper-slide {
+    float:left;
+    @include noflick;
+    img{
+        @include noflick;
+    }
+}
+
+.winphone{
+    .swiper-slide{
+        float: none;
+    }
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+    -ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+    -ms-touch-action: pan-x;
+}
+
+/* Specify Swiper's Size: */
+.swiper-container, .swiper-slide {
+    width:100%;
+    height:auto;
+}
+
+.swiper-active-switch{
+    background:$black;
+}
+
+@media only screen and (min-width: 48em) {
+    .swiper-slide{
+        img{
+            width: 90%;
+        }
     }
 }
 

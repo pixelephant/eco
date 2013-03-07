@@ -13,7 +13,26 @@
 		h1{
 			margin-top:2.5em;
 		}
-	}	
+	}
+	.service{
+		p{
+			padding: 0 1em;
+		}
+        width:50%;
+        float:left;
+        &:last-child{
+            clear:both;
+            float: none;
+        }
+        &:last-child{
+
+        }
+    }
+
+    #actual,#property{
+        float:left;
+        width: 50%;
+    }	
 }
 
 #property,#actual{
@@ -60,5 +79,18 @@
     p{
     	max-width: 30em;
     	margin: 0 auto;
+    }
+}
+
+
+@media all and (min-width: 64em){
+
+    .service{
+        width: 33.3333%;
+        float:left;
+        &:last-child{
+            clear: none;
+            float: left;
+        }
     }
 }
