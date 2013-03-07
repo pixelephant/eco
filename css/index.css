@@ -31,7 +31,7 @@
   font-style: italic;
   font-weight: normal; }
 
-.hnc, .button-white {
+.hnc, .button-white, .t-link {
   text-transform: uppercase;
   font-family: 'HelveticaNeueW02-77BdCn 694066';
   font-weight: normal;
@@ -92,9 +92,176 @@
   position: relative;
   top: 1px; }
 
+.t-link {
+  color: #1072b5;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .t-link span {
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.50–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+    letter-spacing: 1px;
+    border-bottom: 1px solid transparent; }
+
+.s-link {
+  color: #1072b5;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */ }
+
+.no-touch .s-link:hover, .s-link:focus {
+  border-color: #1072b5; }
+
+.no-touch .s-link:active {
+  position: relative;
+  top: 1px;
+  -webkit-transition: none 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: none 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: none 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: none 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */ }
+
+.no-touch .t-link span:hover, .t-link span:focus {
+  border-bottom: 1px solid #1072b5; }
+
+.image-wrap {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+  max-width: 555px;
+  text-align: center; }
+  .image-wrap a {
+    text-decoration: none; }
+  .image-wrap img {
+    border: 10px solid white;
+    -webkit-box-shadow: 0px 0px 0px 1px #d9d8d9;
+    /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+    box-shadow: 0px 0px 0px 1px #d9d8d9;
+    /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+    opacity: 0.92;
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.50–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+    display: inline-block;
+    max-width: 100%; }
+    .image-wrap img:hover, .image-wrap img:focus {
+      opacity: 1; }
+
+.image-wrap:after, .image-wrap:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 5%;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  -webkit-box-shadow: 0 15px 10px #999999;
+  -moz-box-shadow: 0 15px 10px #999999;
+  box-shadow: 0 15px 10px #999999;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg); }
+
+.image-wrap:after {
+  right: 5%;
+  left: auto;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg); }
+
 #value-prop h1 {
   margin-top: 0.5em; }
 
 @media only screen and (min-width: 48em) {
   #value-prop h1 {
     margin-top: 2.5em; } }
+#property, #actual {
+  text-align: center; }
+  #property p, #actual p {
+    max-width: 30em;
+    margin: 0 auto; }
+
+#actual p {
+  margin-bottom: 0.5em; }
+
+#actual div {
+  margin-bottom: 2em; }
+  #actual div:last-child {
+    margin-bottom: 0; }
+
+#services {
+  overflow: hidden; }
+
+.service {
+  display: block;
+  color: #231f20;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 3em; }
+  .service:last-child {
+    margin-bottom: 0; }
+  .service img {
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.50–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+    border: 10px solid white;
+    -webkit-box-shadow: 0px 0px 0px 1px #d9d8d9;
+    /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+    box-shadow: 0px 0px 0px 1px #d9d8d9;
+    /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+    opacity: 0.92;
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.50–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+    border-radius: 50%; }
+    .service img:hover, .service img:focus {
+      opacity: 1; }
+  .service h2 {
+    margin: 1em 0 0.5em 0; }
+  .service p {
+    max-width: 30em;
+    margin: 0 auto; }

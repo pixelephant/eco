@@ -15,3 +15,50 @@
 		}
 	}	
 }
+
+#property,#actual{
+	text-align:center;
+	p{
+		max-width: 30em;
+		margin: 0 auto;
+	}
+}
+
+#actual p{
+	margin-bottom:0.5em;
+}
+
+#actual div{
+	margin-bottom:2em;
+	&:last-child{
+		margin-bottom:0;
+	}
+}
+
+#services{
+    overflow: hidden;
+}
+
+.service{
+    display:block;
+    color: $black;
+    text-decoration: none;
+    text-align: center;
+    margin:0 auto;
+    margin-bottom: 3em;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    img{
+        @include t;
+        @include image-borders;
+        border-radius:50%;
+    }
+    h2{
+    	margin: 1em 0 0.5em 0;
+    }
+    p{
+    	max-width: 30em;
+    	margin: 0 auto;
+    }
+}

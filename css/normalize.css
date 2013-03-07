@@ -127,12 +127,13 @@ a:hover {
 h1 {
     font-size: 1.5em;
     margin:0;
-    margin-bottom: 0.83333333333em;
+    margin-bottom: 0.5em;
 }
 
 h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
+    font-size: 1.3125em;
+    margin: 0;
+    margin-bottom: 0.5em;
 }
 
 h3 {
@@ -527,4 +528,12 @@ textarea {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+*{
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
 }

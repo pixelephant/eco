@@ -83,7 +83,7 @@ textarea {
         width:10%;
         position:absolute;
         text-align: center;
-        left:0;
+        left:1%;
         bottom:10%;
         font-size: 2em;
         &:last-child{
@@ -114,7 +114,6 @@ textarea {
     }
     li{
         @include t;
-        font-size:0.875em;
         border:2px solid transparent;
         a{
             padding: 0.4em 0;
@@ -141,7 +140,7 @@ textarea {
     top: 1px;
     &.eco-logo{
         position: absolute;
-        top:1%;
+        top:10%;
     }
 }
 
@@ -165,8 +164,8 @@ textarea {
             width:100%;
         }
         li{
-            margin: 8em 0.1% 0 0.1%;
-            width: 15.94%;
+            margin: 8em 0.5% 0 0.5%;
+            width: 15.6666666667%;
             text-align: center;
             &.eco-logo{
                 margin-top:0;
@@ -174,6 +173,10 @@ textarea {
                 position: absolute;
                 text-align:center;
                 left:0;
+                top:10%;
+            }
+            a{
+                font-size: 0.80em;
             }
         }
     } 
@@ -188,15 +191,23 @@ textarea {
         margin:0 auto;
     }
     #main-nav li{
-        font-size: 1em;
+        a{
+            font-size: 0.95em;
+        }
         margin-top: 2.5em;
-        width:13.74%;
+        width:13.28%;
+        margin: 2.5em 0.5% 0 0.5%;
         &.eco-logo{
             position: static;
-            width:13.74%;
-            margin-left: 0;
+            width:12.28%;
             left: 0;
             top:0;
+        }
+    }
+    .no-touch #main-nav li:active{
+        &.eco-logo{
+            position: relative;
+            top:1px;
         }
     }
 }
@@ -215,7 +226,7 @@ hgroup{
     }
     hr{
         border-color:#b8b8b8;
-        border-width:2px;
+        border-width:1px;
         width: 20%;
         max-width: 10em;
         margin: 0 auto;
@@ -232,6 +243,7 @@ hgroup{
     hgroup{
         hr{
             border-color:white;
+            border-width: 2px;
         }
         h1,p{
             color: white;
@@ -288,7 +300,7 @@ hgroup{
             a{
                 display:block;
                 float: left;
-                width:26%;
+                width:30%;
                 margin: 0 3% 0 17%;
                 &:last-child{
                     display:block;
@@ -300,9 +312,9 @@ hgroup{
             a{
                 display:block;
                 float: left;
-                width:26%;
+                width:30%;
                 display:block;
-                margin: 0 2%;
+                margin: 0 1.66666666667%;
                 &:first-child{
                     display:block;
                     
@@ -320,9 +332,43 @@ hgroup{
     }
 }
 
+/* ------------------ MAIN ------------------ */
+
+
+#main-content > section{
+    padding: 0 1em;
+    margin: 2em 0;
+}
+
+.caption{    
+    color:$black;
+    @extend .gi;
+    font-size: 1.125em;
+    margin:0.8em auto !important;
+    span{
+        font-size:0.77777777777em;
+        display: block;
+        font-family: 'hn';
+        font-style: normal;
+    }
+}
+
 /* ------------------ COMMON ------------------ */
 
+h2{
+    @extend .gi;
+    text-align: center;
+}
+
 @media only screen and (min-width: 48em) {
+
+    #main-content section p{
+        font-size:1.125em;
+    }
+
+    h2{
+        font-size:1.55em;
+    }
 
     h1{
         font-size: 1.875em;
@@ -331,6 +377,10 @@ hgroup{
     .button-white{
         font-size:1.3125em;
         border-width: 3px;
+    }
+
+    .caption{
+        font-size:1.4em !important;
     }
 
 }
