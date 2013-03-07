@@ -31,7 +31,7 @@
   font-style: italic;
   font-weight: normal; }
 
-.hnc {
+.hnc, .button-white {
   text-transform: uppercase;
   font-family: 'HelveticaNeueW02-77BdCn 694066';
   font-weight: normal;
@@ -59,3 +59,42 @@
 
 .clearfix {
   *zoom: 1; }
+
+.button-white {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 0.4em;
+  line-height: 1.5;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */ }
+
+.no-touch .button-white:hover, .button-white:focus {
+  background: white;
+  color: #231f20; }
+
+.no-touch .button-black:active, .no-touch .button-blue:active, .button-white:active {
+  -webkit-transition: none 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: none 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: none 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: none 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+  position: relative;
+  top: 1px; }
+
+#value-prop h1 {
+  margin-top: 0.5em; }
+
+@media only screen and (min-width: 48em) {
+  #value-prop h1 {
+    margin-top: 2.5em; } }

@@ -27,12 +27,12 @@
 <span aria-hidden="true" data-icon="&#x64;"></span> //data
 
 */
-.gi {
+.gi, #value-prop p {
   font-family: Georgia;
   font-style: italic;
   font-weight: normal; }
 
-.hnc, #main-header a, #jPanelMenu-menu a {
+.hnc, .button-white, #prop-links a, #main-header a, #jPanelMenu-menu a, hgroup h1 {
   text-transform: uppercase;
   font-family: 'HelveticaNeueW02-77BdCn 694066';
   font-weight: normal;
@@ -50,16 +50,49 @@
   font-family: 'HelveticaNeueW02-55Roma'; }
 
 /*HELPERS*/
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, #prop-links:before,
+.clearfix:after,
+#prop-links:after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, #prop-links:after {
   clear: both; }
 
-.clearfix {
+.clearfix, #prop-links {
   *zoom: 1; }
+
+.button-white, #prop-links a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 0.4em;
+  line-height: 1.5;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */ }
+
+.no-touch .button-white:hover, .no-touch #prop-links a:hover, #prop-links .no-touch a:hover, .button-white:focus, #prop-links a:focus {
+  background: white;
+  color: #231f20; }
+
+.no-touch .button-black:active, .no-touch .button-blue:active, .button-white:active, #prop-links a:active {
+  -webkit-transition: none 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: none 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: none 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: none 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+  position: relative;
+  top: 1px; }
 
 html,
 button,
@@ -110,7 +143,9 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
+/* ------------------ HEADER ------------------ */
 #main-header {
+  position: relative;
   width: 100%;
   padding: 1em 0;
   overflow: hidden;
@@ -204,13 +239,16 @@ textarea {
       text-align: center;
       left: 0; } }
 @media only screen and (min-width: 61.875em) {
+  #main-header {
+    padding: 2em 0; }
+
   #main-nav {
     max-width: 71.25em;
     margin: 0 auto; }
 
   #main-nav li {
     font-size: 1em;
-    margin-top: 2em;
+    margin-top: 2.5em;
     width: 13.74%; }
     #main-nav li.eco-logo {
       position: static;
@@ -218,6 +256,85 @@ textarea {
       margin-left: 0;
       left: 0;
       top: 0; } }
+/* ------------------ VALUE PROP ------------------ */
+hgroup {
+  padding: 2em 0;
+  text-align: center; }
+  hgroup hr {
+    border-color: #b8b8b8;
+    border-width: 2px;
+    width: 20%;
+    max-width: 10em;
+    margin: 0 auto; }
+
+#value-prop {
+  background-image: url(../img/bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 18.75em; }
+  #value-prop .wrap {
+    margin: 0 auto;
+    padding: 0 1em; }
+  #value-prop hgroup hr {
+    border-color: white; }
+  #value-prop hgroup h1, #value-prop hgroup p {
+    color: white; }
+  #value-prop p {
+    max-width: 30em;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    line-height: 1.5; }
+
+#prop-links {
+  max-width: 45em;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-align: center;
+  padding: 1em 0; }
+  #prop-links a {
+    display: inline-block; }
+  #prop-links.two a:last-child {
+    display: none; }
+  #prop-links.three a {
+    display: none; }
+    #prop-links.three a:first-child {
+      display: inline-block; }
+
+@media only screen and (min-width: 48em) {
+  #prop-links.two a {
+    display: block;
+    float: left;
+    width: 26%;
+    margin: 0 3% 0 17%; }
+    #prop-links.two a:last-child {
+      display: block;
+      margin: 0 17% 0 3%; }
+  #prop-links.three a {
+    display: block;
+    float: left;
+    width: 26%;
+    display: block;
+    margin: 0 2%; }
+    #prop-links.three a:first-child {
+      display: block; }
+
+  #value-prop {
+    height: 31.25em; }
+    #value-prop p {
+      font-size: 1.5em;
+      max-width: 20em; } }
+/* ------------------ COMMON ------------------ */
+@media only screen and (min-width: 48em) {
+  h1 {
+    font-size: 1.875em; }
+
+  .button-white, #prop-links a {
+    font-size: 1.3125em;
+    border-width: 3px; } }
 @media print {
   * {
     background: transparent !important;

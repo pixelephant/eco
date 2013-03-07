@@ -106,3 +106,26 @@ $gray-border:#D9D8D9;
 .clearfix {
     *zoom: 1;
 }
+
+
+.button-white{
+	@extend .hnc;
+	text-decoration:none;
+	color:white;
+	border:2px solid white;
+	padding:0.4em;
+	line-height:1.5;
+	text-align:center;
+	@include t;
+}
+
+.no-touch .button-white:hover, .button-white:focus{
+	background:white;
+	color:$black;
+}
+
+.no-touch .button-black:active,.no-touch .button-blue:active,.button-white:active{
+	@include t(none);
+	position:relative;
+	top:1px;
+}
