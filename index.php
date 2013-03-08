@@ -17,7 +17,7 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript" src="http://fast.fonts.com/jsapi/084a8b55-380b-4a9f-8ea8-c6a68bb66291.js"></script>
     </head>
-    <body>
+    <body id="index-site">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -26,23 +26,7 @@
 
 
 
-        <header id="main-header">
-            <a href="#" class="mobile" id="menu-trigger">
-                <span aria-hidden="true" data-icon="&#x6d;"></span>
-            </a>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="about">Rólunk</a></li>
-                    <li><a href="references">Referenciák</a></li>
-                    <li><a href="partners">Partnerek</a></li>
-                    <li class="eco-logo"><a href="index"><img src="img/logo.png" alt="Eco System Hungary"></a></li>
-                    <li><a href="actual">Aktuális</a></li>
-                    <li><a href="services">Szolgáltatások</a></li>
-                    <li><a href="contact">Kapcsolat</a></li>
-                </ul>
-            </nav>
-            <a class="mobile" id="phone-trigger" href="tel:+3614334302"><span aria-hidden="true" data-icon="&#x74;"></span></a>
-        </header>
+        <?php include 'header.php' ?>
 
         <section id="value-prop">
             <div class="wrap">
@@ -166,6 +150,8 @@
             </div>
 
         </div>
+
+        <?php include 'footer.php' ?>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>

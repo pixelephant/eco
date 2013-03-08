@@ -31,8 +31,11 @@
 
     #actual,#property{
         float:left;
-        width: 50%;
+        width: 45%;
     }	
+    #actual{
+        margin-right:10%;
+    }
 }
 
 #property,#actual{

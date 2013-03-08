@@ -341,10 +341,15 @@ hgroup{
     max-width: 71.25em;
 }
 
+#main-content{
+    padding-bottom: 2em;
+}
+
 .f-wrap{
     padding: 0 1em;
     max-width: 71.25em;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .caption{    
@@ -498,6 +503,123 @@ hgroup{
         img{
             width: 90%;
         }
+    }
+}
+
+/* ------------------ FOOTER ------------------ */
+
+#main-footer{
+    clear: both;
+    width: 100%;
+    background:$gray;
+    a img{
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    p{
+        text-align: center;
+        margin-bottom: 0;
+        padding-bottom:1em;
+        padding-top:2em;
+        a{
+            @extend .s-link;
+        }
+    }
+    .icons{
+        max-width: 40em;
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        font-size: 1em;
+        text-align: center;
+        a{  
+            font-size: 2em;
+            color:$black;
+            text-decoration: none;
+            width: 33.33333%;
+            float: left;
+            text-align: center;
+            @include t;
+            word-wrap: break-word;
+            b{
+                font-weight: normal;
+                display: none;
+            }
+        }
+    }
+}
+
+.no-touch #main-footer .icons a:hover,#main-footer .icons a:focus{
+    color: $blue;
+}
+
+#footer-nav{
+     width:90%;
+     max-width: 40em;
+     margin: 0 auto;
+     padding: 2em 0;
+     ul{
+        overflow: hidden;
+        border:1px solid $gray-border;
+        border-bottom: none;
+     }
+     li{
+        width:50%;
+        float: left;        
+        border-bottom: 1px solid $gray-border;
+        &:nth-child(odd){
+            border-right:1px solid $gray-border;
+        }
+        @include t;
+     }
+     a{
+        padding:1em;
+        font-size: 0.875em;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color:$black;
+        @include t;
+     }
+}
+
+.no-touch #footer-nav li:hover,#footer-nav li:focus{
+    background: $blue;
+    a{
+        color:white;
+    }
+}
+
+.certification{
+    overflow: hidden;    
+    text-align: center;
+    width: 100%;
+    img{
+        display: inline;
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width: 37.5em){
+    #footer-nav{
+        li{
+            width: 33.3333%;
+            &:nth-child(odd){
+                border-right:none;
+            }
+            &:nth-child(2),&:nth-child(5){
+                border-right:1px solid $gray-border;
+                border-left:1px solid $gray-border;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 48em) {
+     #main-footer .icons a b{
+        display: block;
+        font-size: 0.4em;
     }
 }
 

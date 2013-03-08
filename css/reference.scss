@@ -1,0 +1,110 @@
+@import 'mixins.scss';
+
+#value-prop{
+	background-image:url(../img/bg4.jpeg);
+	h1{
+
+	}
+}
+
+@media only screen and (min-width: 48em) {
+	#value-prop{
+		h1{
+			margin-top:2.5em;
+		}
+	}
+	#prop-links.two a{
+	width:31%;
+	margin:0 3% 0 15%;
+	}
+} 
+
+#extra-data{
+	display:none;
+	ul{
+		list-style-type: none;
+	}
+	li{
+		margin-bottom: 1em;
+		a{
+			@extend .s-link;
+		}
+	}
+	h4{
+		@extend .hnc;
+		margin: 0;
+	}
+	p{
+		margin: 0;
+	}
+}
+
+#title{
+	h2{
+		font-size: 1.7em;
+	}
+	.lead{
+		font-size: 1.1em;
+		text-align: center;
+	}
+
+}	
+
+.text{
+	p{
+		padding:0.5em 0;
+	}
+}
+
+figure{		
+		img{
+			@include t;
+		}
+		.caption{
+			text-align: center;
+		}
+	}
+
+@media only screen and (min-width: 48em) {
+
+	figure{
+    		@extend .clearfix;
+    		clear: both;
+    		padding-top:1em;
+    		p{
+    			float: left;
+    			width:48%;
+    		}
+    		.image-wrap{
+    			float: left;
+    			width: 48%;
+    			margin-right: 4%;
+
+    		}
+    	}
+
+	#title{
+		h2{
+			font-size: 1.875em;
+		}
+
+		.lead{
+			font-size: 1.3em;
+			max-width: 30em;
+			margin: 1em auto;
+		}
+
+	}
+
+	.text{
+		overflow: hidden;
+		p{
+			width:48%;
+			float: left;
+			&:first-child{
+				margin-right: 4%;
+			}
+			font-size:1.125em;
+		}
+	}	
+}

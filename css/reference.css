@@ -31,7 +31,7 @@
   font-style: italic;
   font-weight: normal; }
 
-.hnc, .button-white, .t-link {
+.hnc, .button-white, .t-link, #extra-data h4 {
   text-transform: uppercase;
   font-family: 'HelveticaNeueW02-77BdCn 694066';
   font-weight: normal;
@@ -108,7 +108,7 @@
     letter-spacing: 1px;
     border-bottom: 1px solid transparent; }
 
-.s-link {
+.s-link, #extra-data li a {
   color: #1072b5;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -121,10 +121,10 @@
   transition: all 0.3s ease-in-out;
   /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */ }
 
-.no-touch .s-link:hover, .s-link:focus {
+.no-touch .s-link:hover, .no-touch #extra-data li a:hover, #extra-data li .no-touch a:hover, .s-link:focus, #extra-data li a:focus {
   border-color: #1072b5; }
 
-.no-touch .s-link:active {
+.no-touch .s-link:active, .no-touch #extra-data li a:active, #extra-data li .no-touch a:active {
   position: relative;
   top: 1px;
   -webkit-transition: none 0.3s ease-in-out;
@@ -230,90 +230,72 @@
   left: 50%;
   margin-left: -8px; }
 
-#value-prop h1 {
-  margin-top: 0.5em; }
+#value-prop {
+  background-image: url(../img/bg4.jpeg); }
 
 @media only screen and (min-width: 48em) {
   #value-prop h1 {
     margin-top: 2.5em; }
 
-  .service {
-    width: 50%;
-    float: left; }
-    .service p {
-      padding: 0 1em; }
-    .service:last-child {
-      clear: both;
-      float: none; }
+  #prop-links.two a {
+    width: 31%;
+    margin: 0 3% 0 15%; } }
+#extra-data {
+  display: none; }
+  #extra-data ul {
+    list-style-type: none; }
+  #extra-data li {
+    margin-bottom: 1em; }
+  #extra-data h4 {
+    margin: 0; }
+  #extra-data p {
+    margin: 0; }
 
-  #actual, #property {
-    float: left;
-    width: 45%; }
-
-  #actual {
-    margin-right: 10%; } }
-#property, #actual {
+#title h2 {
+  font-size: 1.7em; }
+#title .lead {
+  font-size: 1.1em;
   text-align: center; }
-  #property p, #actual p {
+
+.text p {
+  padding: 0.5em 0; }
+
+figure img {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.50–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */ }
+figure .caption {
+  text-align: center; }
+
+@media only screen and (min-width: 48em) {
+  figure {
+    clear: both;
+    padding-top: 1em; }
+    figure p {
+      float: left;
+      width: 48%; }
+    figure .image-wrap {
+      float: left;
+      width: 48%;
+      margin-right: 4%; }
+
+  #title h2 {
+    font-size: 1.875em; }
+  #title .lead {
+    font-size: 1.3em;
     max-width: 30em;
-    margin: 0 auto; }
+    margin: 1em auto; }
 
-#actual p {
-  margin-bottom: 0.5em; }
-
-#actual div {
-  margin-bottom: 2em; }
-  #actual div:last-child {
-    margin-bottom: 0; }
-
-#services {
-  overflow: hidden; }
-
-.service {
-  display: block;
-  color: #231f20;
-  text-decoration: none;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 3em; }
-  .service:last-child {
-    margin-bottom: 0; }
-  .service img {
-    -webkit-transition: all 0.3s ease-in-out;
-    /* Chrome 1-25, Safari 3.2+ */
-    -moz-transition: all 0.3s ease-in-out;
-    /* Firefox 4-15 */
-    -o-transition: all 0.3s ease-in-out;
-    /* Opera 10.50–12.00 */
-    transition: all 0.3s ease-in-out;
-    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
-    border: 10px solid white;
-    -webkit-box-shadow: 0px 0px 0px 1px #d9d8d9;
-    /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-    box-shadow: 0px 0px 0px 1px #d9d8d9;
-    /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
-    opacity: 0.92;
-    -webkit-transition: all 0.3s ease-in-out;
-    /* Chrome 1-25, Safari 3.2+ */
-    -moz-transition: all 0.3s ease-in-out;
-    /* Firefox 4-15 */
-    -o-transition: all 0.3s ease-in-out;
-    /* Opera 10.50–12.00 */
-    transition: all 0.3s ease-in-out;
-    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
-    border-radius: 50%; }
-    .service img:hover, .service img:focus {
-      opacity: 1; }
-  .service h2 {
-    margin: 1em 0 0.5em 0; }
-  .service p {
-    max-width: 30em;
-    margin: 0 auto; }
-
-@media all and (min-width: 64em) {
-  .service {
-    width: 33.3333%;
-    float: left; }
-    .service:last-child {
-      clear: none;
-      float: left; } }
+  .text {
+    overflow: hidden; }
+    .text p {
+      width: 48%;
+      float: left;
+      font-size: 1.125em; }
+      .text p:first-child {
+        margin-right: 4%; } }
