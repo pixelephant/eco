@@ -81,9 +81,9 @@
             </section>
 
             <section class="text">
-            	<p>A maga 2000 négyzetméteres alapterületével az irodaház a legnagyobb iroda amit építettünk, brutális
+            	<p>A maga <strong>2000</strong> négyzetméteres alapterületével az irodaház a legnagyobb iroda amit építettünk, brutális
 6000 négyzetméteres üvegborítása pedig a legösszetettebb kivitelezési probléma amit valaha megoldottunk.</p>
-<p>Az építkezés során 32 fős saját létszámmal és 12 alvállalkozóval voltunk jelen az építési területen, összesen 16 tonna földet mozgattunk meg és 390 tonna építőanyagot használtunk fel ehhez a monumentális irodaház felépítéséhez.</p>
+<p>Az építkezés során 32 fős saját létszámmal és <strong>12 alvállalkozóval voltunk jelen</strong> az építési területen, összesen 16 tonna földet mozgattunk meg és 390 tonna építőanyagot használtunk fel ehhez a monumentális irodaház felépítéséhez.</p>
             </section>
 
             <section>

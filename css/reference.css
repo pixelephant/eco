@@ -39,7 +39,7 @@
   color: #231f20;
   letter-spacing: 1px; }
 
-.hnb {
+.hnb, strong {
   font-weight: normal;
   font-family: 'HelveticaNeueW02-75Bold'; }
 
@@ -229,6 +229,9 @@
   border-width: 8px;
   left: 50%;
   margin-left: -8px; }
+
+strong {
+  font-weight: normal; }
 
 #value-prop {
   background-image: url(../img/bg4.jpeg); }

@@ -1,5 +1,10 @@
 @import 'mixins.scss';
 
+strong{
+	@extend .hnb;
+	font-weight:normal;
+}
+
 #value-prop{
 	background-image:url(../img/bg4.jpeg);
 	h1{
